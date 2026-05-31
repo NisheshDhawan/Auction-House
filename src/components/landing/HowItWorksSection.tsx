@@ -91,14 +91,13 @@ const HowItWorksSection = () => {
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  {/* Step Number Background */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-8xl font-serif font-bold text-primary/10">
-                    {step.step}
-                  </div>
-
                   {/* Icon Container */}
                   <div className="relative z-10 w-24 h-24 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20 flex items-center justify-center backdrop-blur-sm">
                     <Icon className="w-10 h-10 text-primary" />
+                    {/* Step Number Badge */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-primary-foreground font-serif font-bold flex items-center justify-center text-sm border-2 border-background shadow-lg">
+                      {step.step}
+                    </div>
                   </div>
 
                   <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
