@@ -1,9 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import FloatingParticles from "./FloatingParticles";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+
+  const handleStartBidding = () => {
+    if (isAuthenticated) {
+      navigate('/products');
+    } else {
+      navigate('/signup');
+    }
+  };
+
+  const handleExploreAuctions = () => {
+    if (isAuthenticated) {
+      navigate('/products');
+    } else {
+      navigate('/signup');
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -14,18 +34,9 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
       </div>
 
-      {/* Floating Particles */}
-      <FloatingParticles />
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-fade-up">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground/80">Live Auctions for Unique Creations</span>
-          </div>
-
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 animate-fade-up-delayed">
             <span className="block text-foreground">Experience Live</span>
@@ -40,11 +51,11 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up-delayed-2">
-            <Button variant="hero" size="xl" className="group">
+            <Button onClick={handleStartBidding} variant="hero" size="xl" className="group">
               Start Bidding
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button onClick={handleExploreAuctions} variant="heroOutline" size="xl">
               Explore Auctions
             </Button>
           </div>
@@ -65,12 +76,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1 h-2 bg-muted-foreground/50 rounded-full" />
-        </div>
-      </div>
+
     </section>
   );
 };

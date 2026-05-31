@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
+    <section id="how-it-works" ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
       {/* Parallax Background */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"

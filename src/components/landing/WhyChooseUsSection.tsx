@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { Activity, DollarSign, Rocket, Lock } from "lucide-react";
+import { Activity, Rocket, Lock } from "lucide-react";
+import { RupeeIcon } from '@/components/ui/rupee-icon';
 
 const pillars = [
   {
@@ -9,7 +10,7 @@ const pillars = [
     gradient: "from-primary to-primary/50",
   },
   {
-    icon: DollarSign,
+    icon: RupeeIcon,
     title: "Fair Pricing",
     description: "Competitive bidding ensures fair market value for every unique creation",
     gradient: "from-accent to-accent/50",

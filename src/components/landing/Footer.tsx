@@ -1,4 +1,4 @@
-import { Sparkles, Instagram, Twitter, Facebook, Linkedin } from "lucide-react";
+import { Gavel, Instagram, Twitter, Facebook, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -23,9 +23,9 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary-foreground" />
+                <Gavel className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-serif font-bold">ArtBid</span>
+              <span className="text-xl font-serif font-bold">Auction House</span>
             </div>
             <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
               The premier live auction platform for handmade and virtual crafts. 
@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 ArtBid. All rights reserved.
+            © 2025 Auction House. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Made with passion for creators everywhere

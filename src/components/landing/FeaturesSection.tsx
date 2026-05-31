@@ -78,7 +78,7 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 relative">
+    <section id="features" ref={sectionRef} className="py-24 px-6 relative">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">

@@ -22,7 +22,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-24 px-6 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
